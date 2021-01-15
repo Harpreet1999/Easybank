@@ -1,0 +1,74 @@
+.article{
+    background-color: $very_light_grey;
+    padding: 6rem 0;
+
+    &-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
+
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+    &-item{
+        box-shadow: 0 3px 0.75rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.3125rem 0.3125rem 0 0;
+        overflow: hidden;
+        background-color: $white;
+        transition: all 300ms ease-in-out;
+
+        &:hover{
+            transform: scale(1.04);
+        }
+    }
+
+    &-image{
+        height: 12.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        
+    }
+
+    &-text{
+        
+        color:  $grayish_blue;
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem ;
+        @include breakpoint-up(medium){
+            padding: 1.875rem 1.5625rem;
+        }
+        
+
+    }
+
+    &-author{
+        font-size: 0.625rem;
+        margin-bottom: 0.75rem;
+    }
+
+    &-title{
+        font-size: 1.0625rem;
+        color: $dark_blue;
+        margin-bottom: 0.5rem;
+        line-height: 1.15;
+        transition: color 300ms ease-in-out;
+        &:hover{
+            color: $lime_green;
+
+        }
+    }
+
+    &-descrip{
+        font-size: 0.8125rem;
+    }
+
+
+
+}

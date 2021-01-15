@@ -1,0 +1,64 @@
+@keyframes fading-in{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+@keyframes fading-out{
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+// hamburgur animation
+.open{
+    .head_menu{
+             
+    > span:first-child{
+        transform: rotate(45deg);  
+        }   
+    
+        > span:nth-child(2){ 
+            opacity: 0;
+        }
+    
+        > span:last-child{
+        transform: rotate(-45deg); 
+        } 
+    }
+
+    .nav_items_mob{
+        visibility: visible;
+    }
+
+ 
+
+
+}
+
+.fade-out{
+    animation: fading-out 300ms ease-in-out forwards;   
+ }
+
+.fade-in{
+    animation: fading-in 300ms ease-in-out forwards;
+ }
+  

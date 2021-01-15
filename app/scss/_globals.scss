@@ -1,0 +1,128 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+
+}
+
+body{
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  line-height: 1.3;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: $grayish_blue;
+  overflow-x: hidden;
+  min-height: 200vh;
+  
+  
+  &.noscroll{
+    overflow: hidden;
+  }
+
+  @include breakpoint-up(large){
+      font-size: 1.125rem;
+  }
+   
+    
+
+}
+
+.spacing{
+  max-width: 69.5rem;
+  margin: 0 auto;
+  
+  &-py{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+
+}
+
+h1, h2, h3{
+  margin-top: 0;
+  color: $dark_blue;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+h1{
+  font-size: 2.3125rem;
+  
+  margin-bottom: 1.5rem;
+
+
+  @include breakpoint-up(large){
+    font-size: 3.25rem;
+  }
+}
+
+h2{
+  font-size: 1.875rem;
+ 
+  margin-bottom:1.5625rem;
+  @include breakpoint-up(large){
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p{
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+  font-size: 0.875rem;
+
+  @include breakpoint-up(medium){
+    font-size: 1rem;
+
+  }
+
+  @include breakpoint-up(large){
+    font-size: 1.125rem;
+  }
+
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    
+}
+
+
+.hide-for-mobile {
+  @include breakpoint-down(medium){
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large){
+    display: none;
+  }
+}
